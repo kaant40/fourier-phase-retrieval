@@ -88,7 +88,7 @@ python experiments.py --quick
 
 ## Notes on how this was made
 
-Written by Kaan Topak, with the code developed with the help of an AI assistant (Claude).
+Written by Kaan Topak.
 I went through the code and results afterwards to understand them. The algorithms are the
 standard ones from the references above; no code from other repositories was copied.
 
