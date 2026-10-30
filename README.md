@@ -1,4 +1,4 @@
-# Fourier phase retrieval from scratch
+<img width="1617" height="831" alt="image" src="https://github.com/user-attachments/assets/be93ab0f-e64f-4d61-a62c-c222d1793a19" /># Fourier phase retrieval from scratch
 
 A small learning project: classical **Fourier phase retrieval** algorithms implemented in
 Python/NumPy, plus a first look at what a **plug-and-play denoising prior** does inside the loop.
@@ -110,7 +110,7 @@ python annealing_experiment.py   # annealing test, about 2.5 minutes
 
 ## Notes on how this was made
 
-Written by Kaan Topak.
+Written by Kaan Topak with the code developed with the help of an AI assistant.
 The algorithms are the standard ones from the references above; no code from other repositories was copied.
 
 ## License
