@@ -1,5 +1,3 @@
-<img width="1617" height="831" alt="image" src="https://github.com/user-attachments/assets/be93ab0f-e64f-4d61-a62c-c222d1793a19" /># Fourier phase retrieval from scratch
-
 A small learning project: classical **Fourier phase retrieval** algorithms implemented in
 Python/NumPy, plus a first look at what a **plug-and-play denoising prior** does inside the loop.
 It is a re-implementation of well-known textbook methods on simulated data, **not original research**.
