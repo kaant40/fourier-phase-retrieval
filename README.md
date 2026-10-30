@@ -98,6 +98,7 @@ pip install -r requirements.txt
 python -m unittest -v        # 5 small sanity tests
 python experiments.py        # full experiments, writes figures to results/
 python experiments.py --quick
+python annealing_experiment.py   # annealing test, about 2.5 minutes
 ```
 
 ## References
@@ -110,8 +111,7 @@ python experiments.py --quick
 ## Notes on how this was made
 
 Written by Kaan Topak.
-I went through the code and results afterwards to understand them. The algorithms are the
-standard ones from the references above; no code from other repositories was copied.
+The algorithms are the standard ones from the references above; no code from other repositories was copied.
 
 ## License
 
