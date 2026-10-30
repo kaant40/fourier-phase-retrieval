@@ -69,6 +69,27 @@ not tuned per noise level.
   literature, which are much more careful than my version.
 - Results come from one test image, one noise model, one fixed denoiser setting and 8
   random starts, so they should be read as a demonstration, not a benchmark.
+### 3. Does annealing the denoising strength explain the in-loop result?
+
+In the experiments above, the denoiser strength inside the HIO loop was fixed. The related
+literature anneals the noise level of the denoiser during the iterations, so I tested whether
+decreasing the TV weight over the iterations (0.2 to 0.01, geometric schedule, applied every 10
+iterations) makes in-loop denoising competitive (`annealing_experiment.py`).
+
+| noise level | HIO+ER | post TV | PnP-HIO fixed | PnP-HIO annealed | annealed + final TV |
+|---|---|---|---|---|---|
+| 1.0 | 23.4 dB | 25.9 dB | 24.0 dB | 23.6 dB | 24.5 dB |
+| 3.0 | 18.4 dB | 22.5 dB | 20.7 dB | 18.8 dB | 20.2 dB |
+| 6.0 | 14.1 dB | 19.2 dB | 17.6 dB | 15.8 dB | 17.6 dB |
+
+Mean PSNR over 8 random starts (standard deviations are in `results/annealing.json`).
+
+![Annealing](results/fig4_annealing.png)
+
+In this setup, annealing did **not** help: the annealed variant was worse than the fixed one at
+every noise level, and denoising once after reconstruction remained the best option. With a
+simple TV denoiser, one test image and one annealing schedule, this only rules out this specific
+explanation; it says nothing about learned denoisers or other schedules.
 
 ## Run it
 
